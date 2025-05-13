@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import React, { ReactNode } from "react";
 
 export async function generateMetadata({ params }: any) {

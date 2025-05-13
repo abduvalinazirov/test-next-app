@@ -1,10 +1,8 @@
 import BackButton from "@/components/BackButton";
 import React from "react";
 
-const page = async ({ params }: { params: { id: string } }) => {
+const page = async ({ params }: any) => {
   const { id } = await params;
-
-  console.log(id);
 
   return (
     <div>
