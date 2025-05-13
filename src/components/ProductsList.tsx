@@ -3,10 +3,14 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
-const ProductsList = ({ initialData }) => {
+interface Props {
+  initialData: any[];
+}
+
+const ProductsList = ({ initialData }: Props) => {
   const [data, setData] = useState(initialData);
 
-  console.log('render');
+  console.log("render");
 
   const refetch = async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/posts", {

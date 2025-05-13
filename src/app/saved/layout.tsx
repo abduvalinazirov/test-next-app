@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import React from "react";
+import React, { ReactNode } from "react";
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: any) {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts/5");
   const post = await res.json();
 
@@ -29,8 +29,12 @@ export async function generateMetadata({ params }) {
     },
   };
 }
-
-const SavedLayout = ({ children, managed, unmanaged }) => {
+interface Props {
+  children: ReactNode;
+  managed: ReactNode;
+  unmanaged: ReactNode;
+}
+const SavedLayout = ({ children, managed, unmanaged }: Props) => {
   return (
     <div>
       <h2>saved layout</h2>

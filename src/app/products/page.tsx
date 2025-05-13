@@ -1,6 +1,4 @@
-import Button from "@/components/Button";
 import ProductsList from "@/components/ProductsList";
-import Link from "next/link";
 import React from "react";
 
 const Products = async () => {
